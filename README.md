@@ -29,14 +29,10 @@ cd /Users/edmond/developer/cross-border-data-qa
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-export DASHSCOPE_API_KEY=sk-xxx
+cp .env.example .env
 ```
 
-也可以把 Key 放在项目根目录的 `Key.json`，格式与课程相同：
-
-```json
-{"DASHSCOPE_API_KEY": "sk-xxx"}
-```
+在 `.env` 中填入 `DASHSCOPE_API_KEY`。程序启动时会自动读取，终端里已经导出的同名变量优先。
 
 ## 使用
 
